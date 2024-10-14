@@ -1,0 +1,894 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+body{
+    font-family:"Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.clr{
+    clear: both;
+}
+.navbar{
+    background-color: #ffffff;
+    text-decoration: none solid rgb(33, 37, 41);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index:99999999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    
+Color : rgb(33, 37, 41);
+   font-weight: 700;
+   font-size: 30px;
+}
+.logo::after{
+    content: '';
+    position: absolute;
+    bottom:35%;;
+    width:5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgb(206, 18, 18);
+
+}
+.navbar ul{
+    display: flex;
+   
+}
+ul{
+    list-style-type: none;
+}
+ul li{
+    padding: 35px 10px;          
+    text-align: center;
+}
+.navbar a{
+    position: relative;
+    text-decoration: none;
+    color:#999;
+    font-weight: 600;
+    font-size: 17px;
+   
+}
+.navbar a:hover{
+    color: #000;
+}
+ .navbar a::after{
+    content: '';
+    position: absolute;
+    width:100%;
+    height:2px;
+    bottom: -5px;
+    left: 0;
+    background-color: transparent; 
+    transition: background-color 0.3s;
+
+ }
+
+
+ .navbar a:hover::after,
+ .navbar a:focus::after, 
+ .navbar a:active::after {
+    background-color: rgb(206, 18, 18); 
+}
+.navbar .home{
+    color: #000;
+    position: relative;
+}
+.navbar .home::after {
+    content: '';
+    position: absolute;
+    width: 100%; 
+    height: 2px;
+    background-color: rgb(206, 18, 18); 
+    bottom: -5px; 
+    left: 0; 
+}
+
+/* .navbar .home::after{
+   content: '';
+   position: absolute;
+
+   width:4.3%;
+   height:2px;
+   background-color: rgb(206, 18, 18);
+   bottom:30%;
+   left:40.2%;
+} */
+
+.dark button{
+    border: none;            
+    background: none;         
+  
+    padding: 35px 10px;            
+    font-weight: 900px;
+    font-size: 25px;   
+    cursor: pointer; 
+}
+
+
+/* ------------------------------------------------------------ */
+/* header */
+
+.header{
+    background-color: #EEEEEE;
+    padding: 50px 0;
+    overflow: hidden;
+}
+.header .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+.header .header-content{
+    width:40%;
+    padding-top: 50px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header-content h1{
+    
+Color:rgb(55, 55, 63);
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-size: 65px;
+    padding-top: 50px;
+}
+
+.header .header-img{
+    width:40%;
+    position: absolute; 
+    left: 58%;
+    bottom:-40px;
+
+
+}
+.header .header-img img{
+    width:90%;
+    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));  
+}
+.header .header-img img:hover {
+    animation-name: ani-img;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes ani-img{
+    0% {
+        transform:translateX(5px)
+    }
+    20%{
+        
+        transform:translatez(2px)
+
+    }
+    40%{
+        transform:translatey(5px)
+
+    }
+    60%{
+        transform:translatex(-5px)
+
+    }
+    80%{
+        transform:translatez(-2px)
+
+
+    }
+
+    100% {
+        transform:translatey(-5px)
+    }
+}
+.header-content p{
+    padding: 20px 0;
+    color:  rgb(79, 79, 90);
+    line-height: 26px;
+}
+.header-content button{
+    background-color: rgb(206, 18, 18);
+    color: #ffffff;
+    border: none;
+    font-size: 15px;
+    padding: 13px 30px;
+    /* border-radius:30px; */
+    border-top-right-radius:30px;
+    border-bottom-right-radius:30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius:35px;
+
+
+}
+.header-content button:hover{
+    background-color: rgb(230, 20, 20);
+}
+
+.header-content .header-watch{
+    position: absolute;
+    left:20%;
+    bottom:5%;
+
+}
+.header-watch{
+    display: inline-block;
+    display: flex;
+    flex-wrap: wrap; 
+
+}
+
+.header-watch a{
+    text-decoration: none;
+    font-weight: 600px;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    vertical-align: middle;   
+
+}
+
+.header-watch a .fa-solid{
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 50%;
+    padding: 15px;
+    border-left: 5px solid rgb(206, 18, 18); 
+    border-top: 5px solid rgb(206, 18, 18); 
+    border-bottom: 5px solid rgb(206, 18, 18); 
+    border-right: transparent; 
+}
+
+.header-watch:hover .watch-video {
+    color:rgb(206, 18, 18); 
+
+}
+.header-watch .watch-video:hover i {
+    color:rgb(206, 18, 18); 
+}
+
+/* ------------------------------------------------------------------------------- */
+
+/* chefs */
+
+.chefs{
+    
+    padding: 50px 0;
+
+}
+.chefs-content{
+    text-align: center;
+    padding: 10px 0;
+}
+.chefs-content p{
+font-family: Inter, sans-serif;
+    color:#7f7f90;
+    font-size: 14px;
+    font-weight: 400;
+
+}
+.chefs-content h1{
+    font-family: "Amatic SC", sans-serif;
+    color: rgb(33, 37, 41);
+    font-size: 50px;
+    font-weight: 400;
+}
+.chefs-content h1 span{
+    color: rgb(206, 18, 18);
+}
+.chefs-items{
+   
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+}
+.chefs-items .item{
+ width: 30%;
+ text-align: center;
+ transition: transform 0.5s;  
+ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+
+
+}
+
+ .item:hover{
+    transform: scale(1.1);
+}
+.chefs-items .item .inner img{
+   
+width:100%;
+} 
+
+
+.chefs-items .item h2{
+    color: rgb(33, 37, 41);
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    padding: 10px
+}
+.chefs-items .item .p1{
+    color: rgb(127, 127, 144);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.chefs-items .item .p2{
+    color: rgb(127, 127, 144);
+        font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    padding: 10px;
+}
+.chefs-items .item .inner .caption li{
+    list-style-type: none;
+      padding-top: 10px;
+      font-size: 18px;
+
+}
+.chefs-items .item .inner .caption{
+    color:#999;
+    background-color:rgba(255, 255, 255, 0.3);
+    width: 13%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    opacity: 0;
+    transition: right 0.5s ease, opacity 0.5s ease-in-out;
+    z-index:1;
+}
+.chefs-items .item .inner:hover .caption{
+    opacity: 1;
+    right: 10px;
+}
+
+
+
+/* .chefs-items .item .inner .caption {
+    color: #999;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 13%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+    transform: translateY(-10px); 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    z-index: 1;
+}
+
+.chefs-items .item .inner:hover .caption {
+    opacity: 1; 
+    transform: translateY(0); 
+} */
+
+
+
+/* ------------------------------------------ */
+
+/* Gallery */
+.Gallery{
+    padding: 50px 0;
+    text-align: center;
+    background-color: #EEEEEE;
+}
+.Gallery-content{
+    text-align: center;
+    padding: 50px 0;
+}
+.Gallery-content p{
+font-family: Inter, sans-serif;
+    color:#7f7f90;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+.Gallery-content h1{
+    font-family: "Amatic SC", sans-serif;
+    color: rgb(33, 37, 41);
+    font-size: 50px;
+    font-weight: 400;
+}
+.Gallery-content h1 span{
+    color: rgb(206, 18, 18);
+}
+
+.Gellary-items {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.Gellary-items .left,.mid,.right{
+    flex-direction: column;
+    width: 31%;
+}
+.Gellary-items .item-img{
+    margin-top: 20px;
+}
+
+.Gellary-items .inner  {
+   border: 3px #ffffff solid;
+   position: relative;
+   overflow: hidden;
+   text-align: center;
+   height: 100%;
+
+}
+.Gellary-items .inner img {
+    width: 100%;
+}
+.item-img .inner .caption {
+    position: absolute;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    bottom: -100%; 
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(8, 8, 8, 0.7);
+    color: #ffffff;
+    text-align: center;
+    transition: bottom 0.5s ease, opacity 0.5s ease-in-out;
+    z-index: 1;
+
+}
+.item-img .inner .caption h2{
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+.item-img .inner .caption p{
+    padding: 10px;
+}
+
+.item-img .inner:hover .caption{
+    opacity: 1;
+    bottom: 0;
+}
+
+
+/* --------------------------------------------------------------- */
+
+.contact{
+    padding: 50px 0;
+    text-align: center;
+    background-color:#ffffff;
+}
+.contact-content{
+    text-align: center;
+    padding: 50px 0;
+}
+.contact-content p{
+font-family: Inter, sans-serif;
+    color:#7f7f90;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+.contact-content h1{
+    font-family: "Amatic SC", sans-serif;
+    color: rgb(33, 37, 41);
+    font-size: 50px;
+    font-weight: 400;
+}
+.contact-content h1 span{
+    color: rgb(206, 18, 18);
+}
+
+.contact-location iframe{
+    width: 98%;
+    height: 21.875rem;
+}
+
+.contact-item{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.w-50{
+    width: 48%;
+    background-color: #F5F5F5;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    
+}
+.inner{
+    position: relative;
+}
+.co{
+    padding: 3px;
+    text-align: center;
+    position: relative;
+    left:-100px;
+    bottom: 20px;
+}
+ .w-50 h2{
+    color: rgb(125, 125, 125) ;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+    left: -30px;
+    bottom: 15px;
+    
+}
+
+.w-50 p{
+    color: rgb(33, 37, 41);
+    position: relative;
+    left:0px;
+    padding: 5px 0;
+   
+} 
+
+
+ .address-content p{
+    color: rgb(33, 37, 41);
+    position:absolute;
+    left: 185px;
+    bottom: -10px;
+
+   
+   
+}
+
+
+.email-content p{
+    color: rgb(33, 37, 41);
+    position: absolute;
+    left: 190px;
+   bottom: -10px;
+}
+.email-content h2{
+    left: -40px;
+}
+
+
+.call-content p{
+    color: rgb(33, 37, 41);
+    position: absolute;
+    left: 190px;
+    bottom: -10px;
+   
+}
+.call-content h2{
+   left: -45px;
+   
+}
+.opening-hours p{
+    color: rgb(33, 37, 41);
+    position: absolute;
+    left: 190px;
+    bottom: -10px;
+   
+}
+.opening-hours h2{
+    left: -13px;   
+}
+
+
+
+.icon{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(206, 18, 18);
+    color: rgb(255, 255, 255)    ;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 10px;
+    bottom: -15px;
+    margin-left:15px;
+}
+.opening-content span{
+    color: rgb(33, 37, 41);
+    font-weight: 700;
+}
+
+.contact-form {
+    background-color: #FAFAFA;
+    padding: 15px 5px 50px 5px;
+}
+.form-user{
+    background-color: #fff;
+}
+.user{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+#name{
+    width: 48%;
+    padding: 15px;
+    border: #E8E3E3 2px solid;
+}
+#email{
+    width: 48%;
+    padding: 15px;
+    border: #E8E3E3 2px solid;
+
+}
+#subject{
+    width: 97.5%;
+    padding: 15px;
+    margin-bottom:15px;
+    border: #E8E3E3 2px solid;
+
+}
+#message{
+    width: 97.5%;
+    padding: 15px;
+    border: #E8E3E3 2px solid;
+
+}
+.form-user button{
+    padding: 15px 40px;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 30px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color:rgb(206, 18, 18);
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+}
+.form-user button:hover{
+    background-color: #E61414 ;
+}
+.form-user input:focus {
+    border: 2px solid rgb(206, 18, 18) !important;
+    outline: none;
+}
+.form-user textarea:focus{
+    border: 2px solid rgb(206, 18, 18) !important;
+    outline: none;
+}
+
+
+
+/* ----------------------------------------------------------------------- */
+
+/* footer */
+
+.footer{
+    background-color: #020202;
+    padding-top: 50px;
+    color: #ffffff;
+
+}
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer-logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.footer-logo h1{
+    position: relative;
+    font-size: 30px;
+    left: 50px;
+    bottom:45px;
+}
+
+.footer-logo h1::after{
+    content: '';
+    position: absolute;
+    bottom:25%;;
+    width:5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgb(206, 18, 18);
+}
+
+.footer-logo p{
+    position: relative;
+    bottom:30px
+}
+.footer-logo h3{
+    font-family: Inter, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    position: relative;
+    left: 70px;
+    bottom:15px;
+}
+.footer-logo h3::after{
+    content: '';
+    position: absolute;
+    width: 260px;
+    height: 2px;
+    background-color: #595959;
+    bottom: -12px;
+    left: -75px;
+}
+.footer-logo ul{
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+.footer-logo .fa-brands{
+    font-size: 24px;
+    line-height: 24px;
+    position: relative;
+    bottom: 20px;
+    left: -15px;
+}
+.Newsletter{
+    width: 51%;
+}
+.footer-logo{
+    width:25%;
+}
+.Touch{
+    width: 25%;
+}
+.Newsletter h2{
+    font-family: Inter, sans-serif;
+    font-size: 19px;
+    font-weight: 700px;
+    padding-bottom:7px;
+}
+.form-Newsletter {
+    position: relative;
+    bottom: 20px;
+}
+.form-Newsletter input{
+  width: 75%;
+  padding: 11px;
+}
+.form-Newsletter input:focus{
+   outline: none;
+  }
+
+.form-Newsletter button{
+    padding: 10px;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color:rgb(206, 18, 18);
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+}
+.form-Newsletter button:hover{
+    background-color: #E61414 ;
+}
+.Newsletter h3{
+    font-size: 19px;
+    font-weight: 700;
+    position: relative;
+    bottom: 18px;
+}
+.Quick-Links{
+    display: flex;
+    justify-content: space-between;
+}
+.Quick-Links .Links_{
+    flex-direction: column;
+}
+.Quick-Links .ri{
+    position: relative;
+    left: -30%;
+
+}
+.Quick-Links .Links_ a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    transition: transform 1s;
+}
+.Quick-Links .Links_ a:hover{
+    transform: translateX(10px);
+}
+
+.Quick-Links .Links_ a::before{
+    content: '\203A';
+    margin-right: 10px;
+    font-size: 25px; 
+    height: 5px;
+    color: #ffffff; 
+
+}
+.Touch h2{
+    font-family: Inter, sans-serif;
+    font-size: 19px;
+    font-weight: 700px;
+}
+.Touch ul{
+    position: relative;
+    bottom:30px;
+    left: -10px;
+}
+
+.Touch ul li{
+    list-style-type: none;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+     font-size: 16px;
+     font-weight: 400;
+     display: block;
+}
+.Touch .fa-solid{
+    position: relative;
+   color: #E61414;
+   font-size: 22px;
+   line-height: 22px;
+   left: -10px;
+   bottom: -8px;
+}
+
+.Touch ul li a{
+   text-decoration: none;
+   color: #fff;
+   display: block;
+}
+.mailto{
+position: relative;
+bottom: 80px;
+}
+.mailto .fa-solid{
+    position: relative;
+    left: -110px;
+    bottom: -30px;
+}
+.tel{
+    position: relative;
+    bottom: 160px;
+    left: -20px;
+}
+.tel .fa-solid{
+    position: relative;
+    left: -90px;
+    bottom: -30px;
+}
